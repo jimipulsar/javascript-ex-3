@@ -1,7 +1,7 @@
 var nome_access = prompt("Inserisci il tuo cognome");
 var separatore = "<br>";
 var array, text, fLen, i;
-var array = [ "Rossi" , "Colapinto" , "Castaldini" , "Papagni" , "Ricci", "Desantis" , "Caldarola"  ];
+var array = [ "Rossi" , "Colapinto" , "Castaldini" , "Papagni" , "Ricci", "Desantis" , "Caldarola" ];
 fLen = array.length;
 
 text = "<ol>";
