@@ -1,7 +1,8 @@
 var nome_access = prompt("Inserisci il tuo cognome");
-var separatore = "<br>";
+
 var array, text, fLen, i;
 var array = [ "Rossi" , "Colapinto" , "Castaldini" , "Papagni" , "Ricci", "Desantis" , "Caldarola" ];
+array.sort();
 fLen = array.length;
 
 text = "<ol>";
@@ -11,8 +12,6 @@ for (i = 0; i < fLen; i++) {
 text += "</ol>";
 
 var cognome =  "Caldarola";
-
-var alfa = new Array("<li>");
 
 var contatore = 0;
 var trovato = false;
