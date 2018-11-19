@@ -1,6 +1,14 @@
 var nome_access = prompt("Inserisci il tuo cognome");
 var separatore = "<br>";
+var array, text, fLen, i;
 var array = [ "Rossi" , "Colapinto" , "Castaldini" , "Papagni" , "Ricci", "Desantis" , "Caldarola"  ];
+fLen = array.length;
+
+text = "<ol>";
+for (i = 0; i < fLen; i++) {
+    text += "<li>" + array[i] + "</li>";
+}
+text += "</ol>";
 
 var cognome =  "Caldarola";
 
@@ -10,11 +18,8 @@ var contatore = 0;
 var trovato = false;
 
 var lista = document.getElementById('lista');
-var arraySorted = array.slice(); //faccio una copia dell'array per non perdere la posizione iniziale
-arraySorted.sort(); // metto in ordine alfabetico i risultati
 
-
-while (!trovato && contatore < arraySorted.length) {
+while (!trovato && contatore < array.length) {
   if (array[contatore] == nome_access) {
     trovato = true;
   }
@@ -23,8 +28,7 @@ while (!trovato && contatore < arraySorted.length) {
 }
 
 if (trovato == true) {
-  document.writeln("<h1>Congratulazioni! Sei presente nella lista.</h1>"  + "Il tuo cognome si trova in " + contatore + "° posizione" + "<br>" + "<h3>Ecco la lista dei partecipanti: </h3>") ;
-  document.write(array.sort());
+  document.writeln("<h1>Congratulazioni! Sei presente nella lista.</h1>"  + "Il tuo cognome si trova in " + contatore + "° posizione" + "<br>" + "<h3>Ecco la lista dei partecipanti: </h3>" + text ) ;
   console.log("Accesso consentito.");
 
 }
